@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
-import { BleClient, BleDevice, dataViewToText } from '@capacitor-community/bluetooth-le';
+import { BleClient, BleDevice } from '@capacitor-community/bluetooth-le';
 import { Toggle } from "@/components/ui/toggle";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { CircleBolt, AlertCircle, CheckCircle2 } from "lucide-react";
+import { Zap, AlertCircle, CheckCircle2 } from "lucide-react";
 
 const SERVICE_UUID = "0000FFE0-0000-1000-8000-00805F9B34FB"; // Common UUID for HC-05 modules
 const CHARACTERISTIC_UUID = "0000FFE1-0000-1000-8000-00805F9B34FB";
@@ -111,7 +111,7 @@ const ArduinoController = () => {
         device.deviceId,
         SERVICE_UUID,
         CHARACTERISTIC_UUID,
-        data.buffer
+        data
       );
       
       console.log(`Sent command: ${command}`);
@@ -186,7 +186,7 @@ const ArduinoController = () => {
               disabled={connecting}
               className={`w-full max-w-xs ${connecting ? 'opacity-70' : ''}`}
             >
-              <CircleBolt className="mr-2 h-4 w-4" />
+              <Zap className="mr-2 h-4 w-4" />
               {isConnected ? 'Disconnect' : (connecting ? 'Connecting...' : 'Connect to Arduino')}
             </Button>
           </div>
