@@ -1,5 +1,6 @@
 
-import { Mail, Phone, Github, Linkedin } from "lucide-react";
+import { Mail, Phone, Github, Linkedin, MessageCircle } from "lucide-react";
+import { Button } from "./ui/button";
 
 export default function Contact() {
   return (
@@ -15,13 +16,22 @@ export default function Contact() {
             <Phone className="h-5 w-5" />
             <span>+91 40762428</span>
           </a>
-          <div className="flex justify-center gap-6 mt-8">
-            <a href="#" className="text-gray-600 hover:text-primary">
-              <Github className="h-6 w-6" />
-            </a>
-            <a href="#" className="text-gray-600 hover:text-primary">
-              <Linkedin className="h-6 w-6" />
-            </a>
+          <div className="flex justify-center gap-4 mt-8">
+            <Button variant="outline" size="lg" className="gap-2" asChild>
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                <Github className="h-5 w-5" /> GitHub
+              </a>
+            </Button>
+            <Button variant="outline" size="lg" className="gap-2" asChild>
+              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-5 w-5" /> LinkedIn
+              </a>
+            </Button>
+            <Button variant="outline" size="lg" className="gap-2" asChild>
+              <a href="https://discord.com/users/yourusername" target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="h-5 w-5" /> Discord
+              </a>
+            </Button>
           </div>
         </div>
       </div>

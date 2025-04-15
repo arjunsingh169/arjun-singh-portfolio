@@ -1,10 +1,10 @@
 
 export default function Skills() {
   const skills = [
-    { name: "HTML", level: "Learning" },
-    { name: "CSS", level: "Learning" },
-    { name: "JavaScript", level: "Learning" },
-    { name: "React", level: "Learning" },
+    { name: "HTML", level: "Proficient" },
+    { name: "CSS", level: "Intermediate" },
+    { name: "JavaScript", level: "Intermediate" },
+    { name: "React", level: "Advanced Beginner" },
   ];
 
   return (
