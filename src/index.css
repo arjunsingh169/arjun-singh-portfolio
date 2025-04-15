@@ -25,6 +25,13 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
+    
+    /* Soft colors for Arduino controller */
+    --soft-blue: 213 90% 97%;
+    --soft-purple: 250 100% 97%;
+    --soft-peach: 20 100% 97%;
+    --soft-green: 120 100% 97%;
+    --soft-yellow: 50 100% 97%;
   }
 }
 
@@ -75,4 +82,25 @@
 
 .section-title {
   @apply text-3xl font-bold mb-6 text-gray-800;
+}
+
+/* Arduino Controller Specific Styles */
+.bg-soft-blue {
+  background-color: hsl(var(--soft-blue));
+}
+
+.bg-soft-purple {
+  background-color: hsl(var(--soft-purple));
+}
+
+.bg-soft-peach {
+  background-color: hsl(var(--soft-peach));
+}
+
+.bg-soft-green {
+  background-color: hsl(var(--soft-green));
+}
+
+.bg-soft-yellow {
+  background-color: hsl(var(--soft-yellow));
 }
